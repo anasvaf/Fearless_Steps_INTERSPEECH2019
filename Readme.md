@@ -27,7 +27,7 @@ Library Prerequisites
 
 ### extract_sad.py
 This script processes the 30 min recordings for training and evaluation into 1 sec chunks (8000 samples).
-We target this problem as a multi-label problem. Despite having two labels (0: non-speech and 1: speech), we will have 8000 different labels in each 1 s wav file.
+We target this problem as a multi-label problem. Despite having two labels (0: non-speech and 1: speech), we will have 8000 different labels for each 1 s wav file.
 The script saves a NumPy array for each 1 sec file with a corresponding NumPy array for its labels.
 You can run the script as `python extract_sad.py train`, for the Train files and `python extract_sad.py test` for the Eval files.
 
