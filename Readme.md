@@ -19,3 +19,15 @@ SAD error rates represent a measure of the amount of time that is misclassified 
 The following link explains the Decision Cost Function (DCF) metric, as well as the '.txt' output file format:
 <a href="https://exploreapollo-audiodata.s3.amazonaws.com/fearless_steps_challenge_2019/v1.0/Fearless_Step_Evaluation_Plan_v1.2.pdf" target="_blank">Evaluation Plan</a>. In particular look at pages: 14-16 and 25.
 
+## Explanation of the Python Scripts
+Library Prerequisites 
+* <a href="https://github.com/jameslyons/python_speech_features" target="_blank">python_speech_features</a>
+* <a href="https://librosa.github.io/librosa/" target="_blank">LibROSA</a>
+* Python 2.7 (The scripts can also run with Python 3.5 and above)
+
+### extract_sad.py
+This script processes the 30 min recordings for training and evaluation into 1 sec chunks (8000 samples).
+We target this problem as a multi-label problem. Despite having two labels (0: non-speech and 1: speech), we will have 8000 different labels in each 1 s wav file.
+The script saves a NumPy array for each 1 sec file with a corresponding NumPy array for its labels.
+You can run the script as `python extract_sad.py train`, for the Train files and `python extract_sad.py test` for the Eval files.
+
