@@ -35,3 +35,6 @@ You can run the script as `python extract_sad.py train`, for the Train files and
 ### audio_to_spectrograms.py
 This script will create a 129x126 spectrogram image (grayscale) for each 1 s wav that was created from the **extract_sad.py**. This spectrogram image will be used as an input to our 2D CRNN.
 
+## Hardware
+The proposed algorithm was trained on an Intel Core i5 - 7600K (4-cores, 4-threads) clocked at 4.2 GHz. The GPU that was used was an Nvidia GTX 1080Ti Founder’s edition with 11 GB GDDR5x memory, 3584 cuda cores and 11.34 TFLOPS float (FP32) performance. The PC had 32 GB of DDR4 RAM and the entire algorithm was developed in Keras 2.2.4 with TensorFlow 1.13.1 backend, CUDA 10.0 and cuDNN 7.5.
+
